@@ -1,0 +1,22 @@
+{
+    "name": "sr/gdrt",
+    "type": "magento-module",
+    "description": "Google Dynamic Remarketing Tag for Magento",
+    "homepage": "https://github.com/sreichel/magento-Sr-GDRT",
+    "license": "OSL-3.0",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors": [
+        {
+            "name": "Sven Reichel",
+            "email": "github-sr@hotmail.com",
+            "role": "Author/Maintainer"
+        },
+        {
+            "name": "Neodan",
+            "homepage": "http://anaraky.com/gdrt",
+            "role": "Author (Anaraky_Gdrt)"
+        }
+    ]
+}

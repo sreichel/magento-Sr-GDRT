@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="before_body_end">
+            <block type="sr_gdrt/init" name="gdrt" as="gdrt" template="sr_gdrt/init.phtml" />
+        </reference>
+    </default>
+</layout>

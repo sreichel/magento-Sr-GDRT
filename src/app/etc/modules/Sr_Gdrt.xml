@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Sr_Gdrt>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Sr_Gdrt>
+    </modules>
+</config>

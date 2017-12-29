@@ -1,0 +1,6 @@
+src/app/code/community/Sr/Gdrt                          app/code/community/Sr/Gdrt
+src/app/design/frontend/base/default/layout/*           app/design/frontend/base/default/layout/
+src/app/design/frontend/base/default/template/sr_gdrt   app/design/frontend/base/default/template/sr_gdrt
+src/app/etc/modules/*                                   app/etc/modules/
+src/app/locale/de_DE/*                                  app/locale/de_DE/
+src/app/locale/en_US/*                                  app/locale/en_US/

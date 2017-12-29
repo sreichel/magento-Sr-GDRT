@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <sections>
+        <google>
+            <groups>
+                <sr_gdrt translate="label">
+                    <label><![CDATA[Google Dynamic Remarketing - General settings <i style="color: lightblue;">- SR GDRT</i>]]></label>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <sort_order>9991</sort_order>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enable Google Remarketing Tag</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <coversion_id translate="label">
+                            <label>Google Conversion ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </coversion_id>
+                        <coversion_label translate="label">
+                            <label>Google Conversion Label</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[This field is optional]]></comment>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </coversion_label>
+                        <use_gtm translate="label">
+                            <label>Use Google Tag Manager</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </use_gtm>
+                        <product_use_sku translate="label">
+                            <label>Use SKU insteaad of Product ID</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment><![CDATA[Must be same as 'Product ID' in the data feeds of the Google Merchant]]></comment>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </product_use_sku>
+                        <product_prefix translate="label">
+                            <label>Prefix for product id</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                <![CDATA[ For example: "prod_" ]]>
+                            </comment>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </product_prefix>
+                        <product_prefix_cp_only translate="label">
+                            <label>Use prefix only for configurable and grouped products</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </product_prefix_cp_only>
+                        <product_suffix translate="label">
+                            <label>Ending for product id</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[ For example: "_prod" ]]></comment>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </product_suffix>
+                        <product_suffix_cp_only translate="label">
+                            <label>Use ending only for configurable and grouped products</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </product_suffix_cp_only>
+                        <include_tax translate="label">
+                            <label>Total value</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>tax/system_config_source_priceType</source_model>
+                            <comment><![CDATA[The value of 'ecomm_totalvalue' with or without taxes?]]></comment>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </include_tax>
+                        <debug>
+                            <label>Show debug information</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>999</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </debug>
+                    </fields>
+                </sr_gdrt>
+                <sr_gdrt_pages translate="label">
+                    <label><![CDATA[Google Dynamic Remarketing - Settings of pages <i style="color: lightblue;">- SR GDRT</i>]]></label>
+                    <sort_order>9992</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <!-- @todo <depends> node for fieldsets - LTS?
+                    <depends>
+                        <enabled>
+                            <fieldset>sr_gdrt</fieldset>
+                            <value>1</value>
+                        </enabled>
+                    </depends>
+                    -->
+                    <comment>
+                        <![CDATA[
+                        <script type="text/javascript">
+                            checkGoogleSrGdrtEnabled = function() {
+                                if ($('google_sr_gdrt_enabled').getValue() > 0) {
+                                    $('google_sr_gdrt_pages').up().show();
+                                } else {
+                                    $('google_sr_gdrt_pages').up().hide();
+                                }
+                            }
+
+                            Event.observe(window, 'load', function() {
+                                Event.observe('google_sr_gdrt_enabled', 'change', checkGoogleSrGdrtEnabled);
+                                checkGoogleSrGdrtEnabled();
+                            })
+                        </script>
+                        ]]>
+                    </comment>
+                    <fields>
+                        <home translate="label">
+                            <label>Home</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[model/controller/action<br/>action is optional]]></comment>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </home>
+                        <searchresults translate="label">
+                            <label>Search results</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[model/controller/action<br/>action is optional]]></comment>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </searchresults>
+                        <category translate="label">
+                            <label>Category</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[model/controller/action<br/>action is optional]]></comment>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </category>
+                        <product translate="label">
+                            <label>Product</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[model/controller/action<br/>action is optional]]></comment>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product>
+                        <cart translate="label">
+                            <label>Cart</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[model/controller/action<br/>action is optional]]></comment>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cart>
+                        <purchase translate="label">
+                            <label>Purchase</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[model/controller/action<br/>action is optional]]></comment>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </purchase>
+                    </fields>
+                </sr_gdrt_pages>
+            </groups>
+        </google>
+    </sections>
+</config>

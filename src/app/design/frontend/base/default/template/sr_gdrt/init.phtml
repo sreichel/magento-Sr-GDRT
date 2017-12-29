@@ -1,0 +1,79 @@
+<?php
+/* @var Sr_Gdrt_Block_Init $this */
+
+/* @var Sr_Gdrt_Helper_Data $helper */
+$helper = $this->helper('sr_gdrt');
+
+$conversionId = $this->getConfig('coversion_id');
+$conversionLabel = $this->getConfig('coversion_label');
+?>
+
+<?php if ($helper->canShow()): ?>
+<?php if ($this->getConfig('use_gtm')): ?>
+<script>
+    dataLayer.push(<?php echo $this->getGoogleTagParams() ?>);
+</script>
+<?php else: ?>
+<script type="text/javascript">
+//<![CDATA[
+    var google_tag_params = <?php echo $this->getGoogleTagParams() ?>;
+    var google_conversion_id = "<?php echo $conversionId ?>";
+    var google_conversion_label = "<?php echo $conversionLabel ?>";
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+//]]>
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/<?php echo $conversionId ?>/?value=0<?php echo  (!empty($gcLabel) ? '&amp;label=' . $gcLabel : '') ?>&amp;guid=ON&amp;script=0&amp;data=<?php echo $this->getUrlParams() ?>"/>
+    </div>
+</noscript>
+<?php endif; ?>
+<?php endif; ?>
+
+<?php if ($helper->canShowDebug()): ?>
+<style>
+    .gdrt-debug {
+        position: fixed;
+        left:0;
+        right:0;
+        bottom:0;
+        padding: 5px 0;
+        background: rgba(255, 208, 202, 0.8);
+        border: 1px solid #f92104;
+    }
+    .gdrt-debug table {
+        margin: 0 auto;
+        font-size: 13px;
+        color: #222;
+    }
+    .gdrt-debug table td.gdrt-debug-title {
+        vertical-align: middle;
+        padding-right: 40px;
+    }
+    .gdrt-debug table td.gdrt-debug-title h3 {
+        margin:0;
+    }
+    .gdrt-debug table td.gdrt-debug-key {
+        text-align: right;
+        font-weight: bold;
+    }
+    .gdrt-debug table td.gdrt-debug-value {
+        text-align: left;
+    }
+</style>
+<div class="gdrt-debug">
+    <table>
+        <tr>
+            <td class="gdrt-debug-title" rowspan="<?php echo count($this->getEcommParams()) + 1 ?>"><h3>GDRT debug</h3></td>
+        </tr>
+        <?php foreach ($this->getEcommParams() as $key => $value): ?>
+        <tr>
+            <td class="gdrt-debug-key"><?php echo $key ?>: &nbsp;</td>
+            <td class="gdrt-debug-value"><?php echo is_array($value) ? implode(',', $value) : $value ?></td>
+        </tr>
+        <?php endforeach;; ?>
+    </table>
+</div>
+<?php endif; ?>
