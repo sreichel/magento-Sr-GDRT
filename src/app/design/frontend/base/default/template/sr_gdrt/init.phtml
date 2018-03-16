@@ -26,7 +26,7 @@ $conversionLabel = $this->getConfig('coversion_label');
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
 <noscript>
     <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/<?php echo $conversionId ?>/?value=0<?php echo  (!empty($gcLabel) ? '&amp;label=' . $gcLabel : '') ?>&amp;guid=ON&amp;script=0&amp;data=<?php echo $this->getUrlParams() ?>"/>
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/<?php echo $conversionId ?>/?value=0<?php echo  (!empty($conversionLabel) ? '&amp;label=' . $conversionLabel : '') ?>&amp;guid=ON&amp;script=0&amp;data=<?php echo $this->getUrlParams() ?>"/>
     </div>
 </noscript>
 <?php endif; ?>

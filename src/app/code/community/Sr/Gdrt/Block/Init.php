@@ -51,7 +51,7 @@ class Sr_Gdrt_Block_Init extends Mage_Core_Block_Template
 
             case Sr_Gdrt_Helper_Data::GDRT_PAGE_PRODUCT:
                 $product = Mage::registry('current_product');
-                $totalvalue = $this->_getProductPrice($product, $this->getConfig('include_tex'));
+                $totalvalue = $this->_getProductPrice($product, $this->getConfig('include_tax'));
 
                 $params = array(
                     'isSaleItem' => (int)($product->getFinalPrice() < $product->getPrice()),
@@ -199,7 +199,7 @@ class Sr_Gdrt_Block_Init extends Mage_Core_Block_Template
                     break;
             }
 
-            $totalvalue += $this->getConfig('include_tex') ? $item->getRowTotalInclTax() : $item->getRowTotal();
+            $totalvalue += $this->getConfig('include_tax') ? $item->getRowTotalInclTax() : $item->getRowTotal();
         }
         $params['ecomm_totalvalue'] = (float)number_format($totalvalue, '2', '.', '');
 
