@@ -59,7 +59,7 @@ class Sr_Gdrt_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function canShow()
     {
-        return Mage::getStoreConfigFlag(self::XML_PATH_ENABLED) && !empty(Mage::getStoreConfig(self::XML_PATH_COVERSION_ID));
+        return Mage::getStoreConfigFlag(self::XML_PATH_ENABLED) && trim(Mage::getStoreConfig(self::XML_PATH_COVERSION_ID)) !== '';
     }
 
     /**
