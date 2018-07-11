@@ -13,7 +13,7 @@ class Sr_Gdrt_Block_Init extends Mage_Core_Block_Template
     {
         $prefix = $suffix = '';
 
-        $value = $this->getConfig('use_product_id') ? $product->getId() : $product->getSku();
+        $value = $this->getConfig('use_sku') ? $product->getSku() : $product->getId();
 
         $isConfiguarable = in_array($product->getTypeId(), array(
                 Mage_Catalog_Model_Product_Type::TYPE_CONFIGURABLE,
